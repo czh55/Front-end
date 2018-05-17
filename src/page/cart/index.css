@@ -35,15 +35,19 @@
     border: 1px solid #ddd;
 }
 .cart-table .cell-info{
-    width: 35%;
+    width: 30%;
+    text-align: left;
+}
+.cart-table .cell-sponsor{
+    width: 7%;
     text-align: left;
 }
 .cart-header .cell-info{
-    width: 45%;
+    width: 40%;
     padding-left: 106px;
 }
 .cart-table .cell-price{
-    width: 10%;
+    width: 7%;
     text-align: center;
 }
 .cart-table .cell-count{
@@ -75,7 +79,7 @@
     user-select : none;
 }
 .cart-table .cell-total{
-    width: 14%;
+    width: 12%;
     text-align: center;
     font-weight: bold;
 }

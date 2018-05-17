@@ -129,10 +129,17 @@ var page = {
         $(document).on('click', '.btn-submit', function(){
             // 总价大于0，进行提交
             if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
-                window.location.href = './order-confirm.html';
+                // 判断是否是相同的sponsor
+                _cart.judgeSameSponsorId(function(res){
+                    window.location.href = './order-confirm.html';
+                }, function(errMsg){
+                    _mm.errorTips('不是同一个sponsor，请重新选择');
+                })
             }else{
                 _mm.errorTips('请选择商品后再提交');
             }
+
+
         });
     },
     // 加载购物车信息
