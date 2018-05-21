@@ -17,7 +17,7 @@ var _mm = {
         $.ajax({
             type        : param.method  || 'get',
             url         : param.url     || '',
-            dataType    : param.type    || 'json',
+            dataType    : param.type    || 'json',  
             data        : param.data    || '',
             success     : function(res){
                 // 请求成功

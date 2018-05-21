@@ -43,6 +43,7 @@
                 <th class="cell-th cell-price">单价</th>
                 <th class="cell-th cell-count">数量</th>
                 <th class="cell-th cell-total">小计</th>
+                <th class="cell-th cell-code">code</th>
             </tr>
             {{#orderItemVoList}}
             <tr>
@@ -52,11 +53,14 @@
                     </a>
                 </td>
                 <td class="cell cell-info">
-                    <a class="link" href="./detail.html?productId={{productId}}" target="_blank">{{productName}}</a>
+                    <a class="link" href="./detail.html?productId={{productId}}" target="_blank">{{productName}}</a>    
                 </td>
                 <td class="cell cell-price">￥{{currentUnitPrice}}</td>
                 <td class="cell cell-count">{{quantity}}</td>
                 <td class="cell cell-total">￥{{totalPrice}}</td>
+                <td class="cell cell-code">
+                    <a href="./code.html?productId={{productId}}" target="_blank">提交代码</a>
+                </td>
             </tr>
             {{/orderItemVoList}}
         </table>
