@@ -57,15 +57,16 @@ var page = {
                     src             : res.uri
                 };
                 _code.saveCode(codeInfo, function(res){
-                    //将提交的数据渲染到页面
-                    var _this           = this,
-                        codeDetailHtml  = '',
-                        $content        = $('.code_input');
-                    $content.html('<div class="loading"></div>');
-                    // 渲染html
-                    codeDetailHtml = _mm.renderHtml(templateIndex, codeInfo);
-                    $content.html(codeDetailHtml);
+                    // //将提交的数据渲染到页面
+                    // var _this           = this,
+                    //     codeDetailHtml  = '',
+                    //     $content        = $('.code_input');
+                    // $content.html('<div class="loading"></div>');
+                    // // 渲染html
+                    // codeDetailHtml = _mm.renderHtml(templateIndex, codeInfo);
+                    // $content.html(codeDetailHtml);
                     _mm.successTips("保存成功");
+                    window.location.href = './code.html?productId='+this.data.productId;
                 }, function(errMsg){
                     _mm.errorTips("上传正确，保存数据库错误");
                 });
