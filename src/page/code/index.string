@@ -1,22 +1,12 @@
-<div class="panel">
-    <div class="panel-title">code提交信息</div>
-    <div class="panel-body">
-        <div class="order-info">
-            <div class="text-line">
-                <span class="text">
-                    下载地址： 
-                    <a href="image.programing.com/{{src}}">{{title}}</a>
-                </span>
-            </div>
-            <div class="text-line">
-                <form id="upload-form">
-                　　　<input type="file" id="upload" name="upload_file" />                 
-                </form> 
-            </div>
-            <div class="text-line">
-                <input type="button" value="立即提交" onclick="submit();"/>
-            </div>
-            
-        </div>
-    </div>
+<div class="text-line">
+    id：
+    <input type="text" id="id" name="id" value="{{id}}" disabled="disabled"/>
+</div>
+<div class="text-line">
+    文件名：
+    <input type="text" id="title" name="title" value="{{title}}"/>
+</div>
+<div class="text-line">
+    文件下载：
+    <a href="http://image.programing.com/{{src}}">{{title}}</a>
 </div>

@@ -50,8 +50,6 @@ var _code = {
             dataType    : 'json',  
             processData : false, 
             contentType : false,
-            async       : false,  
-            cache       : false,
             data        : form,
             success     : function(res){
                 // 请求成功
