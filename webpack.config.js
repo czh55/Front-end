@@ -1,9 +1,3 @@
-/**
- * @Author: anmout
- * @Date:   2018-03-01T11:41:38+08:00
- * @Last modified by:   anmout
- * @Last modified time: 2018-03-01T11:41:41+08:00
- */
  var webpack             = require('webpack');
  var ExtractTextPlugin   = require('extract-text-webpack-plugin');
  var HtmlWebpackPlugin   = require('html-webpack-plugin');
