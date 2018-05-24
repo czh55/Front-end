@@ -15,8 +15,7 @@
             </th>
             <th class="cart-cell cell-info">比赛信息</th>
             <th class="cart-cell cell-sponsor">主办方</th>
-            <th class="cart-cell cell-price">单价</th>
-            <th class="cart-cell cell-count">数量</th>
+            <th class="cart-cell cell-price">报名费</th>
             <th class="cart-cell cell-total">合计</th>
             <th class="cart-cell cell-opera">操作</th>
         </tr>
@@ -46,11 +45,6 @@
             </td>
             <td class="cart-cell cell-sponsor">{{sponsorName}}</td>
             <td class="cart-cell cell-price">￥{{productPrice}}</td>
-            <td class="cart-cell cell-count">
-                <span class="count-btn minus">-</span>
-                <input class="count-input" value="{{quantity}}" data-max="{{productStock}}"/>  
-                <span class="count-btn plus">+</span>
-            </td>
             <td class="cart-cell cell-total">￥{{productTotalPrice}}</td>
             <td class="cart-cell cell-opera">
                 <span class="link cart-delete">删除</span>
@@ -80,7 +74,7 @@
     <div class="submit-con">
         <span>总价：</span>
         <span class="submit-total">￥{{cartTotalPrice}}</span>
-        <span class="btn btn-submit">去结算</span>
+        <span class="btn btn-submit">去报名</span>
     </div>
 </div>
 {{/notEmpty}}

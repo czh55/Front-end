@@ -31,25 +31,12 @@ var page = {
             var imageUrl   = $(this).find('.p-img').attr('src');
             $('.main-img').attr('src', imageUrl);
         });
-        // count的操作
-        $(document).on('click', '.p-count-btn', function(){
-            var type        = $(this).hasClass('plus') ? 'plus' : 'minus',
-                $pCount     = $('.p-count'),
-                currCount   = parseInt($pCount.val()),
-                minCount    = 1,
-                maxCount    = _this.data.detailInfo.stock || 1;
-            if(type === 'plus'){
-                $pCount.val(currCount < maxCount ? currCount + 1 : maxCount);
-            }
-            else if(type === 'minus'){
-                $pCount.val(currCount > minCount ? currCount - 1 : minCount);
-            }
-        });
         // 加入购物车
         $(document).on('click', '.cart-add', function(){
             _cart.addToCart({
                 productId   : _this.data.productId,
-                count       : $('.p-count').val()
+                //数量定义为1
+                count       : 1
             }, function(res){
                 window.location.href = './result.html?type=cart-add';
             }, function(errMsg){

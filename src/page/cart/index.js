@@ -20,7 +20,7 @@ var page = {
     },
     bindEvent : function(){
         var _this = this;
-        // 商品的选择 / 取消选择
+        // 比赛的选择 / 取消选择
         $(document).on('click', '.cart-select', function(){
             var $this = $(this),
                 productId = $this.parents('.cart-table').data('product-id');
@@ -41,7 +41,7 @@ var page = {
                 });
             }
         });
-        // 商品的全选 / 取消全选
+        // 比赛的全选 / 取消全选
         $(document).on('click', '.cart-select-all', function(){
             var $this = $(this);
             // 全选
@@ -61,49 +61,17 @@ var page = {
                 });
             }
         });
-        // 商品数量的变化
-        $(document).on('click', '.count-btn', function(){
-            var $this       = $(this),
-                $pCount     = $this.siblings('.count-input'),
-                currCount   = parseInt($pCount.val()),
-                type        = $this.hasClass('plus') ? 'plus' : 'minus',
-                productId   = $this.parents('.cart-table').data('product-id'),
-                minCount    = 1,
-                maxCount    = parseInt($pCount.data('max')),
-                newCount    = 0;
-            if(type === 'plus'){
-                if(currCount >= maxCount){
-                    _mm.errorTips('该商品数量已达到上限');
-                    return;
-                }
-                newCount = currCount + 1;
-            }else if(type === 'minus'){
-                if(currCount <= minCount){
-                    return;
-                }
-                newCount = currCount - 1;
-            }
-            // 更新购物车商品数量
-            _cart.updateProduct({
-                productId : productId,
-                count : newCount
-            }, function(res){
-                _this.renderCart(res);
-            }, function(errMsg){
-                _this.showCartError();
-            });
-        });
-        // 删除单个商品
+        // 删除单个比赛
         $(document).on('click', '.cart-delete', function(){
-            if(window.confirm('确认要删除该商品？')){
+            if(window.confirm('确认要删除该比赛？')){
                 var productId = $(this).parents('.cart-table')
                     .data('product-id');
                 _this.deleteCartProduct(productId);
             }
         });
-        // 删除选中商品
+        // 删除选中比赛
         $(document).on('click', '.delete-selected', function(){
-            if(window.confirm('确认要删除选中的商品？')){
+            if(window.confirm('确认要删除选中的比赛？')){
                 var arrProductIds = [],
                     $selectedItem = $('.cart-select:checked');
                 // 循环查找选中的productIds
@@ -115,11 +83,11 @@ var page = {
                     _this.deleteCartProduct(arrProductIds.join(','));
                 }
                 else{
-                    _mm.errorTips('您还没有选中要删除的商品');
+                    _mm.errorTips('您还没有选中要删除的比赛');
                 }  
             }
         });
-        // 提交购物车
+        // 提交收藏夹
         $(document).on('click', '.btn-submit', function(){
             // 总价大于0，进行提交
             if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
@@ -130,34 +98,34 @@ var page = {
                     _mm.errorTips('不是同一个sponsor，请重新选择');
                 })
             }else{
-                _mm.errorTips('请选择商品后再提交');
+                _mm.errorTips('请选择比赛后再提交');
             }
 
 
         });
     },
-    // 加载购物车信息
+    // 加载收藏夹信息
     loadCart : function(){
         var _this       = this;
-        // 获取购物车列表
+        // 获取收藏夹列表
         _cart.getCartList(function(res){
             _this.renderCart(res);
         }, function(errMsg){
             _this.showCartError();
         })
     },
-    // 渲染购物车
+    // 渲染收藏夹
     renderCart : function(data){
         this.filter(data);
-        // 缓存购物车信息
+        // 缓存收藏夹信息
         this.data.cartInfo = data;
         // 生成HTML
         var cartHtml = _mm.renderHtml(templateIndex, data);
         $('.page-wrap').html(cartHtml);
-        // 通知导航的购物车更新数量
+        // 通知导航的收藏夹更新数量
         nav.loadCartCount();
     },
-    // 删除指定商品，支持批量，productId用逗号分割
+    // 删除指定比赛，支持批量，productId用逗号分割
     deleteCartProduct : function(productIds){
         var _this = this;
         _cart.deleteProduct(productIds, function(res){

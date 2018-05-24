@@ -81,8 +81,8 @@
          new ExtractTextPlugin("css/[name].css"),
          // html模板的处理
          new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
-         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表')),
-         new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情')),
+         new HtmlWebpackPlugin(getHtmlConfig('list', '比赛列表')),
+         new HtmlWebpackPlugin(getHtmlConfig('detail', '比赛详情')),
          new HtmlWebpackPlugin(getHtmlConfig('cart', '收藏夹')),
          new HtmlWebpackPlugin(getHtmlConfig('code', '代码提交')),
          new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '订单确认')),
