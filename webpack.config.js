@@ -83,7 +83,7 @@
          new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
          new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表')),
          new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情')),
-         new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
+         new HtmlWebpackPlugin(getHtmlConfig('cart', '收藏夹')),
          new HtmlWebpackPlugin(getHtmlConfig('code', '代码提交')),
          new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '订单确认')),
          new HtmlWebpackPlugin(getHtmlConfig('order-list', '订单列表')),
@@ -97,7 +97,7 @@
          new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
          new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
          new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
-         new HtmlWebpackPlugin(getHtmlConfig('about', '关于MMall')),
+         new HtmlWebpackPlugin(getHtmlConfig('about', '关于Coding')),
      ]
  };
 

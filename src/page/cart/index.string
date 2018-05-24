@@ -13,7 +13,7 @@
                     <span>全选</span>
                 </label>
             </th>
-            <th class="cart-cell cell-info">商品信息</th>
+            <th class="cart-cell cell-info">比赛信息</th>
             <th class="cart-cell cell-sponsor">主办方</th>
             <th class="cart-cell cell-price">单价</th>
             <th class="cart-cell cell-count">数量</th>
@@ -86,7 +86,7 @@
 {{/notEmpty}}
 {{^notEmpty}}
 <p class="err-tip">
-    <span>您的购物车空空如也，</span>
-    <a href="./index.html">立即去购物</a>
+    <span>您的收藏夹空空如也，</span>
+    <a href="./index.html">立即去首页</a>
 </p>
 {{/notEmpty}}
