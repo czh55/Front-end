@@ -6,7 +6,7 @@ var _mm                 = require('util/mm.js');
 var _order              = require('service/order-service.js');
 var _address            = require('service/address-service.js');
 var templateAddress     = require('./address-list.string');
-var templateProduct     = require('./product-list.string');
+var templateCompetition     = require('./competition-list.string');
 var addressModal        = require('./address-modal.js');
 
 var page = {
@@ -19,7 +19,7 @@ var page = {
     },
     onLoad : function(){
         this.loadAddressList();
-        this.loadProductList();
+        this.loadCompetitionList();
     },
     bindEvent : function(){
         var _this = this;
@@ -112,15 +112,15 @@ var page = {
         }
     },
     // 加载商品清单
-    loadProductList : function(){
+    loadCompetitionList : function(){
         var _this       = this;
-        $('.product-con').html('<div class="loading"></div>');
+        $('.competition-con').html('<div class="loading"></div>');
         // 获取地址列表
-        _order.getProductList(function(res){
-            var productListHtml = _mm.renderHtml(templateProduct, res);
-            $('.product-con').html(productListHtml);
+        _order.getCompetitionList(function(res){
+            var competitionListHtml = _mm.renderHtml(templateCompetition, res);
+            $('.competition-con').html(competitionListHtml);
         }, function(errMsg){
-            $('.product-con').html('<p class="err-tip">商品信息加载失败，请刷新后重试</p>');
+            $('.competition-con').html('<p class="err-tip">商品信息加载失败，请刷新后重试</p>');
         })
     },
 };

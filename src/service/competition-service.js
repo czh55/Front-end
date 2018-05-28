@@ -2,26 +2,26 @@
 
 var _mm = require('util/mm.js');
 
-var _product = {
+var _competition = {
     // 获取商品列表
-    getProductList : function(listParam, resolve, reject){
+    getCompetitionList : function(listParam, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/product/list.do'),
+            url     : _mm.getServerUrl('/competition/list.do'),
             data    : listParam,
             success : resolve,
             error   : reject
         });
     },
     // 获取商品详细信息
-    getProductDetail : function(productId, resolve, reject){
+    getCompetitionDetail : function(competitionId, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/product/detail.do'),
+            url     : _mm.getServerUrl('/competition/detail.do'),
             data    : {
-                productId : productId
+                competitionId : competitionId
             },
             success : resolve,
             error   : reject
         });
     }
 }
-module.exports = _product;
+module.exports = _competition;

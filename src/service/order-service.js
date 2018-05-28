@@ -3,9 +3,9 @@ var _mm = require('util/mm.js');
 
 var _order = {
     // 获取商品列表
-    getProductList : function(resolve, reject){
+    getCompetitionList : function(resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/order/get_order_cart_product.do'),
+            url     : _mm.getServerUrl('/order/get_order_cart_competition.do'),
             success : resolve,
             error   : reject
         });

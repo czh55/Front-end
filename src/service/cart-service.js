@@ -7,16 +7,16 @@ var _cart = {
     // 获取购物车数量
     getCartCount : function(resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/cart/get_cart_product_count.do'),
+            url     : _mm.getServerUrl('/cart/get_cart_competition_count.do'),
             success : resolve,
             error   : reject
         });
     },
     // 添加到购物车
-    addToCart : function(productInfo, resolve, reject){
+    addToCart : function(competitionInfo, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/add.do'),
-            data    : productInfo,
+            data    : competitionInfo,
             success : resolve,
             error   : reject
         });
@@ -38,29 +38,29 @@ var _cart = {
         });
     },
     // 选择购物车商品
-    selectProduct : function(productId, resolve, reject){
+    selectCompetition : function(competitionId, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/select.do'),
             data    : {
-                productId : productId
+                competitionId : competitionId
             },
             success : resolve,
             error   : reject
         });
     },
     // 取消选择购物车商品
-    unselectProduct : function(productId, resolve, reject){
+    unselectCompetition : function(competitionId, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/un_select.do'),
             data    : {
-                productId : productId
+                competitionId : competitionId
             },
             success : resolve,
             error   : reject
         });
     },
     // 选中全部商品
-    selectAllProduct : function(resolve, reject){
+    selectAllCompetition : function(resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/select_all.do'),
             success : resolve,
@@ -68,7 +68,7 @@ var _cart = {
         });
     },
     // 取消选中全部商品
-    unselectAllProduct : function(resolve, reject){
+    unselectAllCompetition : function(resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/un_select_all.do'),
             success : resolve,
@@ -76,20 +76,20 @@ var _cart = {
         });
     },
     // 更新购物车商品数量
-    updateProduct : function(productInfo, resolve, reject){
+    updateCompetition : function(competitionInfo, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/update.do'),
-            data    : productInfo,
+            data    : competitionInfo,
             success : resolve,
             error   : reject
         });
     },
     // 删除指定商品
-    deleteProduct : function(productIds, resolve, reject){
+    deleteCompetition : function(competitionIds, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/cart/delete_product.do'),
+            url     : _mm.getServerUrl('/cart/delete_competition.do'),
             data    : {
-                productIds : productIds
+                competitionIds : competitionIds
             },
             success : resolve,
             error   : reject

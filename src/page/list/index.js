@@ -4,7 +4,7 @@ require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var _mm             = require('util/mm.js');
-var _product        = require('service/product-service.js');
+var _competition        = require('service/competition-service.js');
 var Pagination      = require('util/pagination/index.js');
 var templateIndex   = require('./index.string');
 
@@ -73,7 +73,7 @@ var page = {
         listParam.categoryId 
             ? (delete listParam.keyword) : (delete listParam.categoryId);
         // 请求接口
-        _product.getProductList(listParam, function(res){
+        _competition.getCompetitionList(listParam, function(res){
             listHtml = _mm.renderHtml(templateIndex, {
                 list :  res.list
             });

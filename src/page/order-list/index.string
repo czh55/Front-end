@@ -28,12 +28,12 @@
     {{#orderItemVoList}}
     <tr>
         <td class="cell cell-img">
-            <a href="./detail.html?productId={{productId}}" target="_blank">
-                <img class="p-img" src="{{imageHost}}{{productImage}}" alt="{{productName}}" />
+            <a href="./detail.html?competitionId={{competitionId}}" target="_blank">
+                <img class="p-img" src="{{imageHost}}{{competitionImage}}" alt="{{competitionName}}" />
             </a>
         </td>
         <td class="cell cell-info">
-            <a class="link" href="./detail.html?productId={{productId}}" target="_blank">{{productName}}</a>
+            <a class="link" href="./detail.html?competitionId={{competitionId}}" target="_blank">{{competitionName}}</a>
         </td>
         <td class="cell cell-price">￥{{currentUnitPrice}}</td>
         <td class="cell cell-count">{{quantity}}</td>

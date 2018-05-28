@@ -10,7 +10,7 @@ var templateIndex   = require('./index.string');
 // page 逻辑部分
 var page = {
     data: {
-        productId : _mm.getUrlParam('productId')
+        competitionId : _mm.getUrlParam('competitionId')
     },
     init: function(){
         this.onLoad();
@@ -46,7 +46,7 @@ var page = {
                 var codeInfo = {
                     id              : $.trim($('#id').val()) || '',
                     title           : $.trim($('#title').val()),
-                    productId       : _mm.getUrlParam('productId'),
+                    competitionId       : _mm.getUrlParam('competitionId'),
                     src             : res.uri
                 };
                 _code.saveCode(codeInfo, function(res){
@@ -59,7 +59,7 @@ var page = {
                     // codeDetailHtml = _mm.renderHtml(templateIndex, codeInfo);
                     // $content.html(codeDetailHtml);
                     _mm.successTips("保存成功");
-                    window.location.href = './code.html?productId='+this.data.productId;
+                    window.location.href = './code.html?competitionId='+this.data.competitionId;
                 }, function(errMsg){
                     _mm.errorTips("上传正确，保存数据库错误");
                 });
@@ -78,9 +78,9 @@ var page = {
             codeDetailHtml  = '',
             $content        = $('.code_input');
         $content.html('<div class="loading"></div>');
-        // _mm.errorTips(this.data.productId);  
-        //这里直传一个productId,userId让服务器端自动获取
-        _code.getCodeDetail(this.data.productId, function(res){
+        // _mm.errorTips(this.data.competitionId);  
+        //这里直传一个competitionId,userId让服务器端自动获取
+        _code.getCodeDetail(this.data.competitionId, function(res){
             // 渲染html
             codeDetailHtml = _mm.renderHtml(templateIndex, res);
             $content.html(codeDetailHtml);

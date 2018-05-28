@@ -36,7 +36,7 @@
     <div class="panel">
     <div class="panel-title">比赛清单</div>
     <div class="panel-body">
-        <table class="product-table">
+        <table class="competition-table">
             <tr>
                 <th class="cell-th cell-img">&nbsp;</th>
                 <th class="cell-th cell-info">比赛信息</th>
@@ -48,18 +48,18 @@
             {{#orderItemVoList}}
             <tr>
                 <td class="cell cell-img">
-                    <a href="./detail.html?productId={{productId}}" target="_blank">
-                        <img class="p-img" src="{{imageHost}}{{productImage}}" alt="{{productName}}" />
+                    <a href="./detail.html?competitionId={{competitionId}}" target="_blank">
+                        <img class="p-img" src="{{imageHost}}{{competitionImage}}" alt="{{competitionName}}" />
                     </a>
                 </td>
                 <td class="cell cell-info">
-                    <a class="link" href="./detail.html?productId={{productId}}" target="_blank">{{productName}}</a>    
+                    <a class="link" href="./detail.html?competitionId={{competitionId}}" target="_blank">{{competitionName}}</a>    
                 </td>
                 <td class="cell cell-price">￥{{currentUnitPrice}}</td>
                 <td class="cell cell-count">{{quantity}}</td>
                 <td class="cell cell-total">￥{{totalPrice}}</td>
                 <td class="cell cell-code">
-                    <a href="./code.html?productId={{productId}}" target="_blank">提交代码</a>
+                    <a href="./code.html?competitionId={{competitionId}}" target="_blank">提交代码</a>
                 </td>
             </tr>
             {{/orderItemVoList}}

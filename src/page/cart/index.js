@@ -23,10 +23,10 @@ var page = {
         // 比赛的选择 / 取消选择
         $(document).on('click', '.cart-select', function(){
             var $this = $(this),
-                productId = $this.parents('.cart-table').data('product-id');
+                competitionId = $this.parents('.cart-table').data('competition-id');
             // 选中
             if($this.is(':checked')){
-                _cart.selectProduct(productId, function(res){
+                _cart.selectCompetition(competitionId, function(res){
                     _this.renderCart(res);
                 }, function(errMsg){
                     _this.showCartError();
@@ -34,7 +34,7 @@ var page = {
             }
             // 取消选中
             else{
-                _cart.unselectProduct(productId, function(res){
+                _cart.unselectCompetition(competitionId, function(res){
                     _this.renderCart(res);
                 }, function(errMsg){
                     _this.showCartError();
@@ -46,7 +46,7 @@ var page = {
             var $this = $(this);
             // 全选
             if($this.is(':checked')){
-                _cart.selectAllProduct(function(res){
+                _cart.selectAllCompetition(function(res){
                     _this.renderCart(res);
                 }, function(errMsg){
                     _this.showCartError();
@@ -54,7 +54,7 @@ var page = {
             }
             // 取消全选
             else{
-                _cart.unselectAllProduct(function(res){
+                _cart.unselectAllCompetition(function(res){
                     _this.renderCart(res);
                 }, function(errMsg){
                     _this.showCartError();
@@ -64,23 +64,23 @@ var page = {
         // 删除单个比赛
         $(document).on('click', '.cart-delete', function(){
             if(window.confirm('确认要删除该比赛？')){
-                var productId = $(this).parents('.cart-table')
-                    .data('product-id');
-                _this.deleteCartProduct(productId);
+                var competitionId = $(this).parents('.cart-table')
+                    .data('competition-id');
+                _this.deleteCartCompetition(competitionId);
             }
         });
         // 删除选中比赛
         $(document).on('click', '.delete-selected', function(){
             if(window.confirm('确认要删除选中的比赛？')){
-                var arrProductIds = [],
+                var arrCompetitionIds = [],
                     $selectedItem = $('.cart-select:checked');
-                // 循环查找选中的productIds
+                // 循环查找选中的competitionIds
                 for(var i = 0, iLength = $selectedItem.length; i < iLength; i ++){
-                    arrProductIds
-                        .push($($selectedItem[i]).parents('.cart-table').data('product-id'));
+                    arrCompetitionIds
+                        .push($($selectedItem[i]).parents('.cart-table').data('competition-id'));
                 }
-                if(arrProductIds.length){
-                    _this.deleteCartProduct(arrProductIds.join(','));
+                if(arrCompetitionIds.length){
+                    _this.deleteCartCompetition(arrCompetitionIds.join(','));
                 }
                 else{
                     _mm.errorTips('您还没有选中要删除的比赛');
@@ -125,10 +125,10 @@ var page = {
         // 通知导航的收藏夹更新数量
         nav.loadCartCount();
     },
-    // 删除指定比赛，支持批量，productId用逗号分割
-    deleteCartProduct : function(productIds){
+    // 删除指定比赛，支持批量，competitionId用逗号分割
+    deleteCartCompetition : function(competitionIds){
         var _this = this;
-        _cart.deleteProduct(productIds, function(res){
+        _cart.deleteCompetition(competitionIds, function(res){
             _this.renderCart(res);
         }, function(errMsg){
             _this.showCartError();
@@ -136,7 +136,7 @@ var page = {
     },
     // 数据匹配
     filter : function(data){
-        data.notEmpty = !!data.cartProductVoList.length;
+        data.notEmpty = !!data.cartCompetitionVoList.length;
     },
     // 显示错误信息
     showCartError: function(){

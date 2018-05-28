@@ -16,45 +16,45 @@
     text-align: center;
 }
 
-/* 商品清单 */
-.product-table{
+/* 比赛清单 */
+.competition-table{
     width: 100%;
     border-collapse: collapse;
 }
-.product-table .cell-th{
+.competition-table .cell-th{
     background: #eee;
 }
-.product-table .cell{
+.competition-table .cell{
     border-bottom: 1px dashed #eee;
     background: #fafafa;
 }
-.product-table .cell-img{
+.competition-table .cell-img{
     padding: 10px;
     width: 10%;
     text-align: center;
 }
-.product-table .cell-img .p-img{
+.competition-table .cell-img .p-img{
     width: 80px;
     height: 80px;
     border: 1px solid #ddd;
 }
-.product-table .cell-info{
+.competition-table .cell-info{
     width: 45%;
     text-align: left;
 }
-.product-table .cell-price{
+.competition-table .cell-price{
     width: 15%;
     text-align: center;
 }
-.product-table .cell-count{
+.competition-table .cell-count{
     width: 10%;
     text-align: center;
 }
-.product-table .cell-total{
+.competition-table .cell-total{
     width: 10%;
     text-align: center;
 }
-.product-table .cell-code{
+.competition-table .cell-code{
     width: 10%;
     text-align: center;
 }

@@ -22,36 +22,36 @@
     </table>
 </div>
 <div class="cart-list">
-    {{#cartProductVoList}}
-    <table class="cart-table" data-product-id="{{productId}}">
+    {{#cartCompetitionVoList}}
+    <table class="cart-table" data-competition-id="{{competitionId}}">
         <tr>
             <td class="cart-cell cell-check">
                 <label class="cart-label">
-                    {{#productChecked}}
+                    {{#competitionChecked}}
                     <input type="checkbox" class="cart-select" checked/>
-                    {{/productChecked}}
-                    {{^productChecked}}
+                    {{/competitionChecked}}
+                    {{^competitionChecked}}
                     <input type="checkbox" class="cart-select" />
-                    {{/productChecked}}
+                    {{/competitionChecked}}
                 </label>
             </td>
             <td class="cart-cell cell-img">
-                <a class="link" href="./detail.html?productId={{productId}}">
-                    <img class="p-img" src="{{imageHost}}{{productMainImage}}" alt="{{productName}}" />
+                <a class="link" href="./detail.html?competitionId={{competitionId}}">
+                    <img class="p-img" src="{{imageHost}}{{competitionMainImage}}" alt="{{competitionName}}" />
                 </a>
             </td>
             <td class="cart-cell cell-info">
-                <a class="link" href="./detail.html?productId={{productId}}">{{productName}}</a>
+                <a class="link" href="./detail.html?competitionId={{competitionId}}">{{competitionName}}</a>
             </td>
             <td class="cart-cell cell-sponsor">{{sponsorName}}</td>
-            <td class="cart-cell cell-price">￥{{productPrice}}</td>
-            <td class="cart-cell cell-total">￥{{productTotalPrice}}</td>
+            <td class="cart-cell cell-price">￥{{competitionPrice}}</td>
+            <td class="cart-cell cell-total">￥{{competitionTotalPrice}}</td>
             <td class="cart-cell cell-opera">
                 <span class="link cart-delete">删除</span>
             </td>
         </tr>
     </table>
-    {{/cartProductVoList}}
+    {{/cartCompetitionVoList}}
 </div>
 <div class="cart-footer">
     <div class="select-con">

@@ -15,11 +15,11 @@ var _code = {
     },
     
     // 获取code详情
-    getCodeDetail : function(productId, resolve, reject){
+    getCodeDetail : function(competitionId, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/code/detail.do'),
             data    : {
-                productId : productId
+                competitionId : competitionId
             },
             success : resolve,
             error   : reject
