@@ -23,6 +23,8 @@
          'common'            : ['./src/page/common/index.js'],
          'index'             : ['./src/page/index/index.js'],
          'list'              : ['./src/page/list/index.js'],
+         'competition-result-detail': ['./src/page/competition-result-detail/index.js'],
+         'competition-result-list': ['./src/page/competition-result-list/index.js'],
          'detail'            : ['./src/page/detail/index.js'],
          'cart'              : ['./src/page/cart/index.js'],
          'code'              : ['./src/page/code/index.js'],
@@ -82,6 +84,8 @@
          // html模板的处理
          new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
          new HtmlWebpackPlugin(getHtmlConfig('list', '比赛列表')),
+         new HtmlWebpackPlugin(getHtmlConfig('competition-result-detail', '结果列表')),
+         new HtmlWebpackPlugin(getHtmlConfig('competition-result-list', '结果列表')),
          new HtmlWebpackPlugin(getHtmlConfig('detail', '比赛详情')),
          new HtmlWebpackPlugin(getHtmlConfig('cart', '收藏夹')),
          new HtmlWebpackPlugin(getHtmlConfig('code', '代码提交')),

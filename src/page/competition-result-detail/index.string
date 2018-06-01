@@ -1,0 +1,15 @@
+<div class="intro-wrap">
+    <div class="p-info-con">
+        <h1 class="p-name">{{title}}</h1>
+    </div>
+</div>
+<div class="detail-wrap">
+    <div class="detail-tab-con">
+        <ul class="tab-list">
+            <li class="tab-item active">详细内容</li>
+        </ul>
+    </div>
+    <div class="detail-con">
+        {{{detail}}}
+    </div>
+</div>

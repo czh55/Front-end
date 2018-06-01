@@ -1,7 +1,7 @@
 <div class="banner">
     <ul>
         <li>
-            <a href="./list.html?categoryId=100021" target="_blank">
+            <a href="./competition-result-list.html" target="_blank">
                 <img class="banner-img" src="../../image/banner/banner0.jpg" />
             </a>
         </li>

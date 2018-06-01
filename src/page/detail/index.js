@@ -31,7 +31,7 @@ var page = {
             var imageUrl   = $(this).find('.p-img').attr('src');
             $('.main-img').attr('src', imageUrl);
         });
-        // 加入购物车
+        // 加入收藏夹
         $(document).on('click', '.cart-add', function(){
             _cart.addToCart({
                 competitionId   : _this.data.competitionId,
@@ -44,7 +44,7 @@ var page = {
             });
         });
     },
-    // 加载商品详情的数据
+    // 加载比赛详情的数据
     loadDetail : function(){
         var _this       = this,
             html        = '',
@@ -60,7 +60,7 @@ var page = {
             html = _mm.renderHtml(templateIndex, res);
             $pageWrap.html(html);
         }, function(errMsg){
-            $pageWrap.html('<p class="err-tip">此商品太淘气，找不到了</p>');
+            $pageWrap.html('<p class="err-tip">此比赛太淘气，找不到了</p>');
         });
     },
     // 数据匹配

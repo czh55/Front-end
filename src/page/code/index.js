@@ -65,7 +65,7 @@ var page = {
                 });
             }, function(errMsg){
                 // formError.show(errMsg);
-                _mm.errorTips("上传错误");
+                _mm.errorTips("上传错误，可能是文件大于10m");
             });
         }
         else{
