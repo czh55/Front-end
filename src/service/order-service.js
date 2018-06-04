@@ -2,7 +2,7 @@
 var _mm = require('util/mm.js');
 
 var _order = {
-    // 获取商品列表
+    // 获取比赛列表
     getCompetitionList : function(resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/order/get_order_cart_competition.do'),

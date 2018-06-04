@@ -33,11 +33,8 @@ var page = {
         });
         // 加入收藏夹
         $(document).on('click', '.cart-add', function(){
-            _cart.addToCart({
-                competitionId   : _this.data.competitionId,
-                //数量定义为1
-                count       : 1
-            }, function(res){
+            _cart.addToCart(_this.data.competitionId
+            , function(res){
                 window.location.href = './result.html?type=cart-add';
             }, function(errMsg){
                 _mm.errorTips(errMsg);
