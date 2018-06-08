@@ -11,10 +11,9 @@ var _order = {
         });
     },
     // 提交订单
-    createOrder : function(orderInfo, resolve, reject){
+    createOrder : function(resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/order/create.do'),
-            data    : orderInfo,
             success : resolve,
             error   : reject
         });
