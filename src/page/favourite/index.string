@@ -1,0 +1,86 @@
+{{#notEmpty}}
+<div class="favourite-header">
+    <table class="favourite-table">
+        <tr>
+            <th class="favourite-cell cell-check">
+                <label class="favourite-label">
+                    {{#allChecked}}
+                    <input type="checkbox" class="favourite-select-all" checked/>
+                    {{/allChecked}}
+                    {{^allChecked}}
+                    <input type="checkbox" class="favourite-select-all" />
+                    {{/allChecked}}
+                    <span>全选</span>
+                </label>
+            </th>
+            <th class="favourite-cell cell-info">比赛信息</th>
+            <th class="favourite-cell cell-sponsor">主办方</th>
+            <th class="favourite-cell cell-price">报名费</th>
+            <th class="favourite-cell cell-total">剩余名额</th>
+            <th class="favourite-cell cell-opera">操作</th>
+        </tr>
+    </table>
+</div>
+<div class="favourite-list">
+    {{#favouriteCompetitionVoList}}
+    <table class="favourite-table" data-competition-id="{{competitionId}}">
+        <tr>
+            <td class="favourite-cell cell-check">
+                <label class="favourite-label">
+                    {{#competitionChecked}}
+                    <input type="checkbox" class="favourite-select" checked/>
+                    {{/competitionChecked}}
+                    {{^competitionChecked}}
+                    <input type="checkbox" class="favourite-select" />
+                    {{/competitionChecked}}
+                </label>
+            </td>
+            <td class="favourite-cell cell-img">
+                <a class="link" href="./detail.html?competitionId={{competitionId}}">
+                    <img class="p-img" src="{{imageHost}}{{competitionMainImage}}" alt="{{competitionName}}" />
+                </a>
+            </td>
+            <td class="favourite-cell cell-info">
+                <a class="link" href="./detail.html?competitionId={{competitionId}}">{{competitionName}}</a>
+            </td>
+            <td class="favourite-cell cell-sponsor">{{sponsorName}}</td>
+            <td class="favourite-cell cell-price">￥{{competitionPrice}}</td>
+            <td class="favourite-cell cell-total">￥{{competitionStock}}</td>
+            <td class="favourite-cell cell-opera">
+                <span class="link favourite-delete">删除</span>
+            </td>
+        </tr>
+    </table>
+    {{/favouriteCompetitionVoList}}
+</div>
+<div class="favourite-footer">
+    <div class="select-con">
+        <label>
+            {{#allChecked}}
+            <input type="checkbox" class="favourite-select-all" checked/>
+            {{/allChecked}}
+            {{^allChecked}}
+            <input type="checkbox" class="favourite-select-all" />
+            {{/allChecked}}
+            <span>全选</span>
+        </label>
+    </div>
+    <div class="delete-con">
+        <span class="link delete-selected">
+            <i class="fa fa-trash-o"></i>
+            <span>删除选中</span>
+        </span>
+    </div>
+    <div class="submit-con">
+        <span>总价：</span>
+        <span class="submit-total">￥{{favouriteTotalPrice}}</span>
+        <span class="btn btn-submit">去报名</span>
+    </div>
+</div>
+{{/notEmpty}}
+{{^notEmpty}}
+<p class="err-tip">
+    <span>您的收藏夹空空如也，</span>
+    <a href="./index.html">立即去首页</a>
+</p>
+{{/notEmpty}}

@@ -6,7 +6,7 @@ require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var _mm             = require('util/mm.js');
 var _competition        = require('service/competition-service.js');
-var _cart           = require('service/cart-service.js');
+var _favourite           = require('service/favourite-service.js');
 var templateIndex   = require('./index.string');
 
 var page = {
@@ -32,10 +32,10 @@ var page = {
             $('.main-img').attr('src', imageUrl);
         });
         // 加入收藏夹
-        $(document).on('click', '.cart-add', function(){
-            _cart.addToCart(_this.data.competitionId
+        $(document).on('click', '.favourite-add', function(){
+            _favourite.addToFavourite(_this.data.competitionId
             , function(res){
-                window.location.href = './result.html?type=cart-add';
+                window.location.href = './result.html?type=favourite-add';
             }, function(errMsg){
                 _mm.errorTips(errMsg);
             });

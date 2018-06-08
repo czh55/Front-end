@@ -120,6 +120,7 @@ var page = {
             var competitionListHtml = _mm.renderHtml(templateCompetition, res);
             $('.competition-con').html(competitionListHtml);
         }, function(errMsg){
+            _mm.errorTips(errMsg+",请删去后重新提交");
             $('.competition-con').html('<p class="err-tip">商品信息加载失败，请刷新后重试</p>');
         })
     },

@@ -1,55 +1,55 @@
 
 
- .cart-table{
+ .favourite-table{
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #ebebeb;
     margin-bottom: 10px;
 }
 /* header */
-.cart-header{
+.favourite-header{
     background: #eee;
 }
-.cart-header .cart-cell{
+.favourite-header .favourite-cell{
     height: 40px;
     line-height: 40px;
 }
-.cart-table .cell-check{
+.favourite-table .cell-check{
     width: 6%;
     text-align: left;
     padding-left: 20px;
 }
-.cart-table .cell-img{
+.favourite-table .cell-img{
     width: 10%;
     text-align: left;
 }
-.cart-table .cell-img .p-img{
+.favourite-table .cell-img .p-img{
     margin: 10px 0;
     width: 80px;
     height: 80px;
     border: 1px solid #ddd;
 }
-.cart-table .cell-info{
+.favourite-table .cell-info{
     width: 30%;
     text-align: left;
 }
-.cart-table .cell-sponsor{
+.favourite-table .cell-sponsor{
     width: 7%;
     text-align: left;
 }
-.cart-header .cell-info{
+.favourite-header .cell-info{
     width: 40%;
     padding-left: 106px;
 }
-.cart-table .cell-price{
+.favourite-table .cell-price{
     width: 7%;
     text-align: center;
 }
-.cart-table .cell-count{
+.favourite-table .cell-count{
     width: 15%;
     text-align: center;
 }
-.cart-table .cell-count .count-input{
+.favourite-table .cell-count .count-input{
     width: 60px;
     height: 28px;
     line-height: 28px;
@@ -59,7 +59,7 @@
     outline: none;
     color: #333;
 }
-.cart-table .cell-count .count-btn{
+.favourite-table .cell-count .count-btn{
     display: inline-block;
     width: 20px;
     height: 28px;
@@ -73,42 +73,42 @@
     -ms-user-select : none;
     user-select : none;
 }
-.cart-table .cell-total{
+.favourite-table .cell-total{
     width: 12%;
     text-align: center;
     font-weight: bold;
 }
-.cart-table .cell-opera{
+.favourite-table .cell-opera{
     width: 10%;
     text-align: center;
 }
 
 /* footer */
-.cart-footer{
+.favourite-footer{
     position: relative;
     line-height: 50px;
     background: #eee;
     overflow: hidden;
 }
-.cart-footer .select-con{
+.favourite-footer .select-con{
     float: left;
     padding-left: 20px;
 }
-.cart-footer .delete-con{
+.favourite-footer .delete-con{
     float: left;
     margin-left: 20px;
 }
-.cart-footer .submit-con{
+.favourite-footer .submit-con{
     float: right;
 }
-.cart-footer .submit-con .submit-total{
+.favourite-footer .submit-con .submit-total{
     font-size: 18px;
     color: #c60023;
     font-weight: bold;
     margin-right: 30px;
     vertical-align: middle;
 }
-.cart-footer .submit-con .btn-submit{
+.favourite-footer .submit-con .btn-submit{
     width: 80px;
     text-align: center;
     height: 50px;

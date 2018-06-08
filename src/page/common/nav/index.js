@@ -3,13 +3,13 @@
 require('./index.css');
 var _mm     = require('util/mm.js');
 var _user   = require('service/user-service.js');
-var _cart   = require('service/cart-service.js');
+var _favourite   = require('service/favourite-service.js');
 // 导航
 var nav = {
     init : function(){
         this.bindEvent();
         this.loadUserInfo();
-        this.loadCartCount();
+        this.loadFavouriteCount();
         return this;
     },
     bindEvent : function(){
@@ -39,12 +39,12 @@ var nav = {
             // do nothing
         });
     },
-    // 加载购物车数量
-    loadCartCount : function(){
-        _cart.getCartCount(function(res){
-            $('.nav .cart-count').text(res || 0);
+    // 加载收藏夹数量
+    loadFavouriteCount : function(){
+        _favourite.getFavouriteCount(function(res){
+            $('.nav .favourite-count').text(res || 0);
         }, function(errMsg){
-            $('.nav .cart-count').text(0);
+            $('.nav .favourite-count').text(0);
         });
     }
 };

@@ -19,11 +19,11 @@
             <span class="info">￥{{price}}</span>
         </div>
         <div class="p-info-item">
-            <span class="label">库存:</span>
+            <span class="label">名额:</span>
             <span class="info">{{stock}}</span>
         </div>
         <div class="p-info-item">
-            <a class="btn cart-add">加入收藏夹</a>
+            <a class="btn favourite-add">加入收藏夹</a>
         </div>
     </div>
 </div>
