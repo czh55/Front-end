@@ -25,5 +25,5 @@
 <div class="submit-con">
     <span>订单总价:</span>
     <span class="submit-total">￥{{competitionTotalPrice}}</span>
-    <span class="btn order-submit">提交订单</span>
+    <span class="btn order-submit">报名</span>
 </div>
