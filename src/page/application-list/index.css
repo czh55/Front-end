@@ -1,0 +1,60 @@
+
+.application-list-table{
+    width: 100%;
+    bapplication-collapse: collapse;
+    background: #fafafa;
+    margin-bottom: 20px;
+}
+.application-list-table .cell{
+    padding: 10px 0;
+    color: #666;
+    bapplication-bottom: 1px solid #eee;
+}
+.application-list-table.header{
+    background: #eee;
+}
+.application-list-table .application-info{
+    background: #eee;
+    padding: 10px;
+    color: #999;
+}
+.application-list-table .application-info .application-text{
+    margin-right: 25px;
+}
+.application-list-table .application-info .application-num{
+    font-weight: bold;
+}
+.application-list-table .application-info .application-total{
+    font-weight: bold;
+    color: #c60023;
+}
+.application-list-table .application-info .application-detail{
+    float: right;
+}
+
+.application-list-table .cell-img{
+    padding: 10px;
+    width: 10%;
+    text-align: center;
+}
+.application-list-table .cell-img .p-img{
+    width: 80px;
+    height: 80px;
+    bapplication: 1px solid #ddd;
+}
+.application-list-table .cell-info{
+    width: 45%;
+    text-align: left;
+}
+.application-list-table .cell-price{
+    width: 15%;
+    text-align: center;
+}
+.application-list-table .cell-count{
+    width: 15%;
+    text-align: center;
+}
+.application-list-table .cell-total{
+    width: 15%;
+    text-align: center;
+}

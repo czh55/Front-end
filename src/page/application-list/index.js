@@ -5,7 +5,7 @@ require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var navSide         = require('page/common/nav-side/index.js');
 var _mm             = require('util/mm.js');
-var _order          = require('service/order-service.js');
+var _application          = require('service/application-service.js');
 var Pagination      = require('util/pagination/index.js');
 var templateIndex   = require('./index.string');
 
@@ -21,22 +21,22 @@ var page = {
         this.onLoad();
     },
     onLoad : function(){
-        this.loadOrderList();
+        this.loadApplicationList();
         // 初始化左侧菜单
         navSide.init({
-            name: 'order-list'
+            name: 'application-list'
         });
     },
-    // 加载订单列表
-    loadOrderList: function(){
+    // 加载报名列表
+    loadApplicationList: function(){
         var _this           = this,
-            orderListHtml   = '',
-            $listCon        = $('.order-list-con');
+            applicationListHtml   = '',
+            $listCon        = $('.application-list-con');
         $listCon.html('<div class="loading"></div>');
-        _order.getOrderList(this.data.listParam, function(res){
+        _application.getApplicationList(this.data.listParam, function(res){
             // 渲染html
-            orderListHtml = _mm.renderHtml(templateIndex, res);
-            $listCon.html(orderListHtml);
+            applicationListHtml = _mm.renderHtml(templateIndex, res);
+            $listCon.html(applicationListHtml);
             _this.loadPagination({
                 hasPreviousPage : res.hasPreviousPage,
                 prePage         : res.prePage,
@@ -46,7 +46,7 @@ var page = {
                 pages           : res.pages
             });
         }, function(errMsg){
-            $listCon.html('<p class="err-tip">加载订单失败，请刷新后重试</p>');
+            $listCon.html('<p class="err-tip">加载报名失败，请刷新后重试</p>');
         });
     },
     // 加载分页信息
@@ -57,7 +57,7 @@ var page = {
             container : $('.pagination'),
             onSelectPage : function(pageNum){
                 _this.data.listParam.pageNum = pageNum;
-                _this.loadOrderList();
+                _this.loadApplicationList();
             }
         }));
     }

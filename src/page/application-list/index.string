@@ -1,0 +1,44 @@
+<table class="application-list-table header">
+    <tr>
+        <th class="cell cell-img">&nbsp;</th>
+        <th class="cell cell-info">比赛信息</th>
+        <th class="cell cell-price">报名费</th>
+        <th class="cell cell-total">小计</th>
+    </tr>
+</table>
+{{#list}}
+<table class="application-list-table application-item">
+    <tr>
+        <td colspan="5" class="application-info">
+            <span class="application-text">
+                <span>报名号：</span>
+                <a class="link application-num" href="./application-detail.html?applicationNumber={{applicationNo}}" target="_blank">{{applicationNo}}</a>
+            </span>
+            <span class="application-text">{{createTime}}</span>
+            <span class="application-text">报名状态：{{statusDesc}}</span>
+            <span class="application-text">
+                <span>报名总价：</span>
+                <span class="application-total">￥{{payment}}</span>
+            </span>
+            <a class="link application-detail" href="./application-detail.html?applicationNumber={{applicationNo}}" target="_blank">查看详情></a>
+        </td>
+    </tr>
+    {{#applicationItemVoList}}
+    <tr>
+        <td class="cell cell-img">
+            <a href="./detail.html?competitionId={{competitionId}}" target="_blank">
+                <img class="p-img" src="{{imageHost}}{{competitionImage}}" alt="{{competitionName}}" />
+            </a>
+        </td>
+        <td class="cell cell-info">
+            <a class="link" href="./detail.html?competitionId={{competitionId}}" target="_blank">{{competitionName}}</a>
+        </td>
+        <td class="cell cell-price">￥{{currentUnitPrice}}</td>
+        <td class="cell cell-total">￥{{totalPrice}}</td>
+    </tr>
+    {{/applicationItemVoList}}
+</table>
+{{/list}}
+{{^list}}
+<p class="err-tip">您暂时还没有报名</p>
+{{/list}}

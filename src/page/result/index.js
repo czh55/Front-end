@@ -8,9 +8,9 @@ $(function(){
     var type        = _mm.getUrlParam('type') || 'default',
         $element    = $('.' + type + '-success');
     if(type === 'payment'){
-        var orderNumber  = _mm.getUrlParam('orderNumber'),
-            $orderNumber = $element.find('.order-number');
-        $orderNumber.attr('href', $orderNumber.attr('href') + orderNumber);
+        var applicationNumber  = _mm.getUrlParam('applicationNumber'),
+            $applicationNumber = $element.find('.application-number');
+        $applicationNumber.attr('href', $applicationNumber.attr('href') + applicationNumber);
     }
     // 显示对应的提示元素
     $element.show();

@@ -1,12 +1,12 @@
 /* 订单信息 */
-.order-info .text-line{
+.application-info .text-line{
     height: 30px;
     line-height: 30px;
 }
-.order-info .text-line .text{
+.application-info .text-line .text{
     margin-right: 30px;
 }
-.order-info .btn{
+.application-info .btn{
     width: 80px;
     padding: 0;
     height: 30px;
@@ -19,13 +19,13 @@
 /* 比赛清单 */
 .competition-table{
     width: 100%;
-    border-collapse: collapse;
+    bapplication-collapse: collapse;
 }
 .competition-table .cell-th{
     background: #eee;
 }
 .competition-table .cell{
-    border-bottom: 1px dashed #eee;
+    bapplication-bottom: 1px dashed #eee;
     background: #fafafa;
 }
 .competition-table .cell-img{
@@ -36,7 +36,7 @@
 .competition-table .cell-img .p-img{
     width: 80px;
     height: 80px;
-    border: 1px solid #ddd;
+    bapplication: 1px solid #ddd;
 }
 .competition-table .cell-info{
     width: 45%;

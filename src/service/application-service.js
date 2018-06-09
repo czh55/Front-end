@@ -1,53 +1,53 @@
 'use strict';
 var _mm = require('util/mm.js');
 
-var _order = {
+var _application = {
     // 获取比赛列表
     getCompetitionList : function(resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/order/get_order_favourite_competition.do'),
+            url     : _mm.getServerUrl('/application/get_application_favourite_competition.do'),
             success : resolve,
             error   : reject
         });
     },
     // 提交订单
-    createOrder : function(resolve, reject){
+    createApplication : function(resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/order/create.do'),
+            url     : _mm.getServerUrl('/application/create.do'),
             success : resolve,
             error   : reject
         });
     },
     // 获取订单列表
-    getOrderList : function(listParam, resolve, reject){
+    getApplicationList : function(listParam, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/order/list.do'),
+            url     : _mm.getServerUrl('/application/list.do'),
             data    : listParam,
             success : resolve,
             error   : reject
         });
     },
     // 获取订单详情
-    getOrderDetail : function(orderNumber, resolve, reject){
+    getApplicationDetail : function(applicationNumber, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/order/detail.do'),
+            url     : _mm.getServerUrl('/application/detail.do'),
             data    : {
-                orderNo : orderNumber
+                applicationNo : applicationNumber
             },
             success : resolve,
             error   : reject
         });
     },
     // 取消订单
-    cancelOrder : function(orderNumber, resolve, reject){
+    cancelApplication : function(applicationNumber, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/order/cancel.do'),
+            url     : _mm.getServerUrl('/application/cancel.do'),
             data    : {
-                orderNo : orderNumber
+                applicationNo : applicationNumber
             },
             success : resolve,
             error   : reject
         });
     }
 }
-module.exports = _order;
+module.exports = _application;

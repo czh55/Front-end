@@ -3,7 +3,7 @@ require('./index.css');
 require('page/common/header/index.js');
 require('page/common/nav/index.js');
 var _mm                 = require('util/mm.js');
-var _order              = require('service/order-service.js');
+var _application              = require('service/application-service.js');
 var templateCompetition     = require('./competition-list.string');
 
 var page = {
@@ -17,10 +17,10 @@ var page = {
     bindEvent : function(){
         var _this = this;
         // 订单的提交
-        $(document).on('click', '.order-submit', function(){
-            _order.createOrder(
+        $(document).on('click', '.application-submit', function(){
+            _application.createApplication(
             function(res){
-                window.location.href = './payment.html?orderNumber=' + res.orderNo;
+                window.location.href = './payment.html?applicationNumber=' + res.applicationNo;
             }, function(errMsg){
                 _mm.errorTips(errMsg)
             });
@@ -32,7 +32,7 @@ var page = {
         var _this       = this;
         $('.competition-con').html('<div class="loading"></div>');
         // 获取比赛列表
-        _order.getCompetitionList(function(res){
+        _application.getCompetitionList(function(res){
             var competitionListHtml = _mm.renderHtml(templateCompetition, res);
             $('.competition-con').html(competitionListHtml);
         }, function(errMsg){

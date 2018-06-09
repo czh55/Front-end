@@ -4,22 +4,22 @@ var _mm = require('util/mm.js');
 
 var _payment = {
     // 获取支付信息
-    getPaymentInfo : function(orderNumber, resolve, reject){
+    getPaymentInfo : function(applicationNumber, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/order/pay.do'),
+            url     : _mm.getServerUrl('/application/pay.do'),
             data    : {
-                orderNo : orderNumber
+                applicationNo : applicationNumber
             },
             success : resolve,
             error   : reject
         });
     },
     // 获取订单状态
-    getPaymentStatus : function(orderNumber, resolve, reject){
+    getPaymentStatus : function(applicationNumber, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/order/query_order_pay_status.do'),
+            url     : _mm.getServerUrl('/application/query_application_pay_status.do'),
             data    : {
-                orderNo : orderNumber
+                applicationNo : applicationNumber
             },
             success : resolve,
             error   : reject

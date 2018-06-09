@@ -11,7 +11,7 @@ var templateIndex   = require('./index.string');
 // page 逻辑部分
 var page = {
     data: {
-        orderNumber : _mm.getUrlParam('orderNumber')
+        applicationNumber : _mm.getUrlParam('applicationNumber')
     },
     init: function(){
         this.onLoad();
@@ -26,23 +26,23 @@ var page = {
             paymentHtml     = '',
             $pageWrap       = $('.page-wrap');
         $pageWrap.html('<div class="loading"></div>');
-        _payment.getPaymentInfo(this.data.orderNumber, function(res){
+        _payment.getPaymentInfo(this.data.applicationNumber, function(res){
             // 渲染html
             paymentHtml = _mm.renderHtml(templateIndex, res);
             $pageWrap.html(paymentHtml);
-            _this.listenOrderStatus();
+            _this.listenApplicationStatus();
         }, function(errMsg){
             $pageWrap.html('<p class="err-tip">' + errMsg + '</p>');
         });
     },
     // 监听订单状态
-    listenOrderStatus : function(){
+    listenApplicationStatus : function(){
         var _this = this;
         this.paymentTimer = window.setInterval(function(){
-            _payment.getPaymentStatus(_this.data.orderNumber, function(res){
+            _payment.getPaymentStatus(_this.data.applicationNumber, function(res){
                 if(res == true){
                     window.location.href 
-                        = './result.html?type=payment&orderNumber=' + _this.data.orderNumber;
+                        = './result.html?type=payment&applicationNumber=' + _this.data.applicationNumber;
                 }
             });
         }, 5e3);

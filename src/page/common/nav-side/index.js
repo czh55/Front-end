@@ -8,7 +8,7 @@ var navSide = {
         name : '',
         navList : [
             {name : 'user-center', desc : '个人中心', href: './user-center.html'},
-            {name : 'order-list', desc : '我的订单', href: './order-list.html'},
+            {name : 'order-list', desc : '已报名', href: './application-list.html'},
             {name : 'user-pass-update', desc : '修改密码', href: './user-pass-update.html'},
         ]
     },

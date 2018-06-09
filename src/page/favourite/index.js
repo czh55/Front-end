@@ -108,7 +108,7 @@ var page = {
                         // 判断是否是相同的sponsor
                         _favourite.judgeSameSponsorId(function(res){
                             
-                            window.location.href = './order-confirm.html';
+                            window.location.href = './application-confirm.html';
                         }, function(errMsg){
                             _mm.errorTips('不是同一个sponsor，请重新选择');
                         })
