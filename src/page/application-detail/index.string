@@ -31,7 +31,6 @@
                 <th class="cell-th cell-img">&nbsp;</th>
                 <th class="cell-th cell-info">比赛信息</th>
                 <th class="cell-th cell-price">单价</th>
-                <th class="cell-th cell-total">小计</th>
                 <th class="cell-th cell-code">code</th>
             </tr>
             {{#applicationItemVoList}}
@@ -45,7 +44,6 @@
                     <a class="link" href="./detail.html?competitionId={{competitionId}}" target="_blank">{{competitionName}}</a>    
                 </td>
                 <td class="cell cell-price">￥{{currentUnitPrice}}</td>
-                <td class="cell cell-total">￥{{totalPrice}}</td>
                 <td class="cell cell-code">
                     <a href="./code.html?competitionId={{competitionId}}" target="_blank">提交代码</a>
                 </td>
