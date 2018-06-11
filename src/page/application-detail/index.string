@@ -30,7 +30,7 @@
             <tr>
                 <th class="cell-th cell-img">&nbsp;</th>
                 <th class="cell-th cell-info">比赛信息</th>
-                <th class="cell-th cell-price">单价</th>
+                <th class="cell-th cell-price">报名费</th>
                 <th class="cell-th cell-code">code</th>
             </tr>
             {{#applicationItemVoList}}

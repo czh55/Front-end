@@ -16,7 +16,7 @@ var page = {
     },
     bindEvent : function(){
         var _this = this;
-        // 订单的提交
+        // 报名的提交
         $(document).on('click', '.application-submit', function(){
             _application.createApplication(
             function(res){
@@ -36,7 +36,7 @@ var page = {
             var competitionListHtml = _mm.renderHtml(templateCompetition, res);
             $('.competition-con').html(competitionListHtml);
         }, function(errMsg){
-            _mm.errorTips(errMsg+",请删去后重新提交");
+            _mm.errorTips(errMsg);
             $('.competition-con').html('<p class="err-tip">比赛信息加载失败，请刷新后重试</p>');
         })
     },
