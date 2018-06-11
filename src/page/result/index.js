@@ -10,6 +10,7 @@ $(function(){
     if(type === 'payment'){
         var applicationNumber  = _mm.getUrlParam('applicationNumber'),
             $applicationNumber = $element.find('.application-number');
+
         $applicationNumber.attr('href', $applicationNumber.attr('href') + applicationNumber);
     }
     // 显示对应的提示元素
